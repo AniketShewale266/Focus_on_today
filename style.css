@@ -1,0 +1,183 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&family=Roboto+Mono&display=swap') */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+body{
+    background-color: #353535;
+}
+
+.heading{
+    font-size: 2.3rem;
+    text-align: center;
+    color: #48A300;
+}
+.today{
+    color: #d3f734;
+}
+.app-container{
+    background-color: #FBFBFB;
+    max-width: 600px;
+    margin: 0 auto;
+    /* border: 2px solid green; */
+    border-radius: 15px;
+    padding: 32px 42px;
+    /* box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.08); */
+    /* box-shadow: 0 0 10px 5px rgba(rgb(245, 244, 244), green, blue, alpha); */
+}
+.subtitle{
+    position: relative;
+}
+.sun{
+    vertical-align: middle;
+    margin-left: 16px;
+}
+.sun{
+    animation: rotateImg 2s linear infinite;
+  }
+  @keyframes rotateImg{
+    from {
+     transform: rotate(0deg);
+    }
+   to {
+    transform: rotate(359deg);
+   }
+  }
+
+.face{
+    position: absolute;
+    left: 20%;
+    right: 36px;
+    top: 20px;
+}
+.progresstitle{
+    margin: 12px 0px;
+}
+.progressbar{
+    height: 26px;
+    margin-top: 12px;
+    background-color: rgba(72, 163, 0, 0.1);
+    border-radius: 15px;
+}
+.progressvalue{
+    height: 100%;
+    margin-top: 12px;
+    background-color: #48A300;
+    border-radius: 15px;
+    width: 0%;
+    font-weight: 500;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    /* padding: 0px 12px; */
+    overflow: hidden;
+    color: #EEFFE0;
+    transition: width 0.2s ease-in-out;
+}
+.progressvalue span{
+    padding-left: 20px;
+    min-width: max-content;
+}
+.error-lable{
+    font-size: 14px;
+    margin-top: 8px;
+    color: #f3505d;
+    display: none;
+}
+.main_container{
+    margin-top: 40px;
+}
+.goal-container{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    height: 73px;
+    margin-bottom: 25px;
+    padding: 0px 22px;
+    border: 1px solid #949090;
+    border-radius: 17px;
+    background-color: #FFFFFF;
+}
+.custom-checkbox{
+    border-radius: 50%;
+    height: 30px;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    /* background-color: #353535; */
+    justify-content: center;
+    border: 2px solid rgb(66, 65, 65);
+    width: 30px;
+}
+.check_icon{
+    display: none;
+}
+.completed .check_icon{
+    display: block;
+}
+.inputtext{
+    margin: 0px 12px;
+    padding: 6px 2px;
+    font-size: 15px;
+    align-self: stretch;
+    outline: none;
+    /* flex-grow: 1; */
+    width: 100%;
+    font-weight: 500;
+    border: none;
+}
+.inputtext::placeholder{
+    color: #918b8b;
+}
+.quotetext{
+    font-weight: 500;
+    text-align: center;
+}
+.madetext{
+    font-size: 10px;
+    font-weight: 500;
+    color: #858585;
+    margin-top: 12px;
+    text-align: center;
+}
+.completed .custom-checkbox{
+    background-color: #48A300;
+    border-color: #48A300;
+}
+.completed .inputtext{
+    color: #48A300;
+    text-decoration-line: line-through;
+}
+.show-error .error-lable{
+    display: block;
+}
+@media (max-width: 768px){
+    .heading{
+        font-size: 32px;
+    }
+    .app-container{
+        padding: 16px 32px;
+        margin: 0 auto;
+    }
+    .progressvalue{
+       font-size: 10px;
+    }
+    .goal-container{
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        height: 62px;
+        margin-bottom: 20px;
+        padding: 0px 22px;
+        border: 1px solid #949090;
+        border-radius: 14px;
+        background-color: #FFFFFF;
+    }
+    .progressbar{
+        height: 24px;
+    }
+}
